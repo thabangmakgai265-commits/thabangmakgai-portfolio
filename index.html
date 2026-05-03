@@ -69,11 +69,17 @@ header p {
     border-radius: 8px;
     font-weight: 600;
     transition: 0.3s;
+
+    text-decoration: none;   /* 🔥 removes underline */
+    border: none;
+    outline: none;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus,
+.btn:active {
     background: #0ea5e9;
-    transform: translateY(-2px);
+    text-decoration: none;   /* 🔥 keep it gone */
 }
 /* SECTIONS */
 section {

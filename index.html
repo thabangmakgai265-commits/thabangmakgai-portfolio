@@ -61,25 +61,34 @@ header p {
 }
 
 /* CV BUTTON */
-.btn {
-    display: inline-block;
-    padding: 10px 18px;
-    background: #38bdf8;
-    color: #0b1220;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s;
-
-    text-decoration: none;   /* 🔥 removes underline */
-    border: none;
-    outline: none;
+.hero-buttons {
+    display: flex;
+    flex-direction: column;      /* 🔥 stack vertically */
+    align-items: center;         /* 🔥 center everything */
+    gap: 12px;
+    margin-top: 25px;
 }
 
-.btn:hover,
-.btn:focus,
-.btn:active {
-    background: #0ea5e9;
-    text-decoration: none;   /* 🔥 keep it gone */
+/* BUTTON STYLE */
+.btn-outline {
+    width: 260px;                /* 🔥 same size = clean look */
+    text-align: center;
+
+    padding: 12px;
+    background: transparent;
+    color: #cbd5e1;              /* 🔥 clean light text (NOT dark blue) */
+    border: 1px solid #38bdf8;   /* 🔥 your blue outline */
+    border-radius: 8px;
+    font-weight: 600;
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* HOVER (optional but clean) */
+.btn-outline:hover {
+    background: #38bdf8;
+    color: #0b1220;
 }
 /* SECTIONS */
 section {

@@ -7,8 +7,6 @@
 
 <style> 
 
-<style>
-
 /* ROOT (GLOBAL VARIABLES) */
 :root {
     --bg: #0b1220;
@@ -55,7 +53,6 @@ body {
 
 /* HERO */
 header {
-    text-align: center;
     padding: 90px 20px;
     background: linear-gradient(135deg, #1e293b, #0f172a);
 }
@@ -74,23 +71,23 @@ header p {
 }
 
 /* CV BUTTON */
-.hero-buttons {
-    display: flex;
-    flex-direction: column;      /* 🔥 stack vertically */
-    align-items: center;         /* 🔥 center everything */
-    gap: 12px;
-    margin-top: 25px;
+.hero-buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+    margin-top:25px;
 }
 
 /* BUTTON STYLE */
 .btn-outline {
-    width: 260px;                /* 🔥 same size = clean look */
+    width: 260px;                /*  same size = clean look */
     text-align: center;
 
     padding: 12px;
     background: transparent;
-    color: #cbd5e1;              /* 🔥 clean light text (NOT dark blue) */
-    border: 1px solid #38bdf8;   /* 🔥 your blue outline */
+    color: #cbd5e1;              /*  clean light text (NOT dark blue) */
+    border: 1px solid #38bdf8;   /*  your blue outline */
     border-radius: 8px;
     font-weight: 600;
 
@@ -172,6 +169,55 @@ footer {
     font-size: 13px;
     border-top: 1px solid #1e293b;
 }
+
+/* HERO PHOTO */
+.hero-content{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+    min-width:320px;
+}
+
+.hero-image{
+    flex:0 0 240px;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,.25);
+}
+
+@media(max-width:768px){
+
+.hero-content{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-buttons{
+    align-items:center;
+}
+
+.hero-image img{
+    width:180px;
+    height:180px;
+}
+
+}
 </style>
 </head>
 
@@ -190,28 +236,45 @@ footer {
 
 <!-- HERO -->
 <header>
-    <h1>Thabang Makgai</h1>
-    <p style="margin-top:10px; font-size:14px; color:#64748b;">
-Portfolio • <a href="https://github.com/thabangmakgai265-commits" target="_blank" style="color:#38bdf8;">GitHub</a> • Case Studies Available on Request
-</p>
-   <p>People Analytics | HRIS | Workforce Intelligence</p>
-<p style="color:#94a3b8; font-size:15px; margin-top:8px;">
-I help translate HR data into insight that support better workforce decisions, using analytics, HR systems, and predictive modeling.
-</p>
+    <div class="hero-content">
 
-    <div style="margin-top: 25px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+        <div class="hero-text">
 
-        <a href="mailto:thabangmakgai265@gmail.com?subject=People%20Analytics%20Opportunity%20-%20CV%20Request" class="btn-outline">
-             Request CV & Profile
-        </a>
+            <h1>Thabang Makgai</h1>
 
-       <a href="mailto:thabangmakgai265@gmail.com?subject=HR%20Analytics%20Consulting%20Discussion" class="btn-outline">
-     Discuss HR Analytics Use Case
- </a>
+            <p style="margin-top:10px; font-size:14px; color:#64748b;">
+                Portfolio •
+                <a href="https://github.com/thabangmakgai265-commits" target="_blank" style="color:#38bdf8;">
+                    GitHub
+                </a>
+                • Case Studies Available on Request
+            </p>
 
-<a href="mailto:thabangmakgai265@gmail.com?subject=Interview%20Request%20-%20People%20Analytics%20Role" class="btn-outline">
-     Schedule Interview
- </a>
+            <p>People Analytics | HRIS | Workforce Intelligence</p>
+
+            <p style="color:#94a3b8; font-size:15px; margin-top:8px;">
+                I help translate HR data into insight that support better workforce decisions,
+                using analytics, HR systems, and predictive modeling.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="mailto:thabangmakgai265@gmail.com?subject=People%20Analytics%20Opportunity%20-%20CV%20Request" class="btn-outline">
+                    Request CV & Profile
+                </a>
+
+                <a href="mailto:thabangmakgai265@gmail.com?subject=HR%20Analytics%20Consulting%20Discussion" class="btn-outline">
+                    Discuss HR Analytics Use Case
+                </a>
+
+                <a href="mailto:thabangmakgai265@gmail.com?subject=Interview%20Request%20-%20People%20Analytics%20Role" class="btn-outline">
+                    Schedule Interview
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 </header>
     <!-- move this OUTSIDE -->
@@ -290,7 +353,7 @@ Available for HR internships • HR Analytics • People Data Roles
 </div>
 
     <div class="card">
-    <h3>AI Recruitment Screening Model</h3>
+    <h3>Intelligence Recruitment Screening Model</h3>
     <p><strong>Duration:</strong> December 2025 – February 2026</p>
 
     <h4>Business Problem</h4>
@@ -309,7 +372,7 @@ Available for HR internships • HR Analytics • People Data Roles
     <p>Reduces recruiter workload and improves hiring consistency and fairness in selection processes.</p>
         <h4>Industry Feedback</h4>
 <p>
-The AI recruitment screening model was reviewed through feedback from both HR and IT perspectives at Continental. HR feedback focused on fairness, equity, and candidate ranking logic, while IT feedback highlighted system structure, implementation feasibility, and potential integration into HR systems.
+The Inteligence recruitment screening model was reviewed through feedback from both HR and IT perspectives at Continental. HR feedback focused on fairness, equity, and candidate ranking logic, while IT feedback highlighted system structure, implementation feasibility, and potential integration into HR systems.
 </p>
 
         
